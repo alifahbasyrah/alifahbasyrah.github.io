@@ -113,47 +113,57 @@ h2 {
     padding-left: 10px;
 }
 
-/* Skills Section Grid Layout */
+/* ===================================================
+   SKILLS SECTION (FIXED FLEXBOX & GRID LAYOUT)
+   =================================================== */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 kolom di atas, sisa 2 otomatis di bawah */
-    gap: 15px;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* Maksimal 4 kolom */
+    gap: 15px !important;
 }
 
 .skill-card {
     background-color: var(--card-bg);
-    padding: 20px 15px;
-    border-radius: 8px;
+    padding: 25px 15px;
+    border-radius: 12px;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     
-    /* Center Teks & Ikon */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    /* Paksa semua konten tersusun vertikal tepat di tengah */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 140px;
 }
 
+/* Atur Ikon agar di atas dan besar */
 .skill-card i {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
+    font-size: 2.5rem !important;
+    margin-bottom: 10px !important;
+    display: block !important;
 }
 
+/* Atur Teks Tepat di Bawah Ikon */
 .skill-card span {
     font-size: 0.95rem;
+    display: block;
 }
 
 .skill-card small {
     font-size: 0.75rem;
     color: var(--accent-color);
-    margin-top: 4px;
+    margin-top: 6px;
     font-weight: 400;
+    display: block;
 }
 
 .skill-card:hover {
     border: 1px solid var(--accent-color);
 }
+
+/* =================================================== */
 
 /* Filter Buttons */
 .filter-container {
@@ -234,6 +244,6 @@ footer {
 /* Responsive Mobile Layout */
 @media (max-width: 600px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* Di HP berubah jadi 2 kolom */
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
