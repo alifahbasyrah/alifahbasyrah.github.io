@@ -7,7 +7,7 @@
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.light-theme {
+body.light-theme {
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
     --accent-color: #0284c7;
@@ -113,10 +113,11 @@ h2 {
     padding-left: 10px;
 }
 
-/* Skills Section Grid Layout */
+/* Skills Section Flexbox Layout (4 Atas, 2 Bawah Ketengah) */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -132,6 +133,8 @@ h2 {
     justify-content: center;
     text-align: center;
     min-height: 130px;
+    flex: 1 1 calc(25% - 15px); /* Membagi 4 kartu secara simetris di baris pertama */
+    max-width: calc(25% - 15px);
 }
 
 .skills-grid .skill-card i {
@@ -235,7 +238,8 @@ footer {
 
 /* Responsive Mobile Layout */
 @media (max-width: 600px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .skills-grid .skill-card {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
     }
 }
