@@ -4,222 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alifah Basyrah Marsani - Portofolio</title>
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .light-theme {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --accent-color: #0284c7;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Navbar & Theme Toggle */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .theme-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--accent-color);
-            color: var(--text-primary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .theme-btn:hover {
-            background: var(--accent-color);
-            color: #fff;
-        }
-
-        /* Hero / Header Section */
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 1px solid var(--card-bg);
-        }
-
-        /* Foto Profil */
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--accent-color);
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-        }
-
-        header h1 span {
-            color: var(--accent-color);
-        }
-
-        header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            max-width: 650px;
-            margin: 10px auto 20px auto;
-        }
-
-        .social-links a {
-            color: var(--accent-color);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 600;
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Sections */
-        section {
-            padding: 40px 0;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-            border-left: 4px solid var(--accent-color);
-            padding-left: 10px;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-card {
-            background-color: var(--card-bg);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .skill-card:hover {
-            border: 1px solid var(--accent-color);
-        }
-
-        /* Filter Buttons */
-        .filter-container {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .filter-btn {
-            background: var(--card-bg);
-            color: var(--text-primary);
-            border: none;
-            padding: 6px 14px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .filter-btn.active {
-            background: var(--accent-color);
-            color: #ffffff;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .project-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .tag {
-            background-color: rgba(56, 189, 248, 0.15);
-            color: var(--accent-color);
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 5px;
-        }
-
-        .project-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--card-bg);
-            margin-top: 40px;
-        }
-    </style>
+    
+    <!-- Link Ke File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Devicon Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 
@@ -230,14 +20,15 @@
         </nav>
 
         <header>
-            <!-- Foto Profil (Ganti URL gambar di bawah dengan foto kamu) -->
+            <!-- Foto Profil -->
             <img src="pas potho.jpg" alt="Foto Profil Alifah" class="profile-img" id="profileImg">
             
             <h1>Alifah Basyrah Marsani</h1>
-            <p>Hi! I'm an Informatics undergraduate student currently in my 6th semester, with a growing passion for becoming a Game AI Developer. I am interested in exploring the intersection of artificial intelligence, programming, and game development.
-
-So far, I have developed skills in JavaScript, Python, HTML, and CSS, while continuously expanding my knowledge through academic projects and independent learning. I am always eager to explore new technologies, improve my skills, and gain experience in AI and game development.
-</p>
+            <p>
+                Hi! I'm an Informatics undergraduate student currently in my 6th semester, with a growing passion for becoming a Game AI Developer. I am interested in exploring the intersection of artificial intelligence, programming, and game development.
+                <br><br>
+                So far, I have developed skills in JavaScript, Python, HTML, and CSS, while continuously expanding my knowledge through academic projects and independent learning. I am always eager to explore new technologies, improve my skills, and gain experience in AI and game development.
+            </p>
             
             <div class="social-links">
                 <a href="https://github.com/alifahbasyrah" target="_blank">GitHub</a>
@@ -246,52 +37,50 @@ So far, I have developed skills in JavaScript, Python, HTML, and CSS, while cont
             </div>
         </header>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        
+        <!-- Keahlian -->
         <section id="skills">
-    <h2>Keahlian</h2>
+            <h2>Keahlian</h2>
 
-    <div class="skills-grid">
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML</span>
+                </div>
 
-        <div class="skill-card">
-            <i class="devicon-html5-plain colored"></i>
-            <span>HTML</span>
-        </div>
+                <div class="skill-card">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS</span>
+                </div>
 
-        <div class="skill-card">
-            <i class="devicon-css3-plain colored"></i>
-            <span>CSS</span>
-        </div>
+                <div class="skill-card">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <span>JavaScript</span>
+                </div>
 
-        <div class="skill-card">
-            <i class="devicon-javascript-plain colored"></i>
-            <span>JavaScript</span>
-        </div>
+                <div class="skill-card">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>Python</span>
+                </div>
 
-        <div class="skill-card">
-            <i class="devicon-python-plain colored"></i>
-            <span>Python</span>
-        </div>
+                <div class="skill-card learning">
+                    <i class="devicon-unity-plain"></i>
+                    <span>Game Development</span>
+                    <small>Currently Learning</small>
+                </div>
 
-        <div class="skill-card learning">
-            <i class="devicon-unity-plain"></i>
-            <span>Game Development</span>
-            <small>Currently Learning</small>
-        </div>
+                <div class="skill-card learning">
+                    <i class="devicon-tensorflow-original colored"></i>
+                    <span>Artificial Intelligence</span>
+                    <small>Currently Learning</small>
+                </div>
+            </div>
+        </section>
 
-        <div class="skill-card learning">
-            <i class="devicon-tensorflow-original colored"></i>
-            <span>Artificial Intelligence</span>
-            <small>Currently Learning</small>
-        </div>
-
-    </div>
-</section>
-
+        <!-- Proyek -->
         <section id="projects">
             <h2>Proyek Portofolio</h2>
             
-            <!-- Interaktif: Filter Proyek -->
+            <!-- Filter Proyek -->
             <div class="filter-container">
                 <button class="filter-btn active" onclick="filterProjects('all')">Semua</button>
                 <button class="filter-btn" onclick="filterProjects('web')">Web App</button>
