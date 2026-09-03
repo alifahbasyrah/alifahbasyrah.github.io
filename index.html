@@ -61,6 +61,16 @@
                     <span>Python</span>
                 </div>
 
+                <div class="skill-card">
+                    <i class="devicon-jupyter-plain colored"></i>
+                    <span>Jupyter Notebook</span>
+                </div>
+
+                <div class="skill-card">
+                    <i class="devicon-opencv-plain colored"></i>
+                    <span>Image & Signal Processing</span>
+                </div>
+
                 <div class="skill-card learning">
                     <i class="devicon-unity-plain"></i>
                     <span>Game Development</span>
@@ -75,29 +85,82 @@
             </div>
         </section>
 
-        <!-- Proyek -->
+        <!-- Proyek Portofolio -->
         <section id="projects">
             <h2>Proyek Portofolio</h2>
             
+            <!-- Filter Proyek -->
             <div class="filter-container">
                 <button class="filter-btn active" onclick="filterProjects('all')">Semua</button>
                 <button class="filter-btn" onclick="filterProjects('web')">Web App</button>
-                <button class="filter-btn" onclick="filterProjects('js')">JavaScript</button>
+                <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+                <button class="filter-btn" onclick="filterProjects('ml')">ML / Web Integration</button>
+                <button class="filter-btn" onclick="filterProjects('dl')">Deep Learning & Citra</button>
             </div>
 
             <div class="projects-grid">
+                <!-- Anti Boncos -->
                 <div class="project-card" data-category="web">
-                    <h3>E-Commerce Web</h3>
-                    <p>Website toko online responsif menggunakan HTML dan CSS modern.</p>
-                    <span class="tag">HTML/CSS</span>
-                    <br><a href="#" class="project-link">Lihat Kode &rarr;</a>
+                    <h3>Anti Boncos</h3>
+                    <p>Website pengelolaan keuangan hasil kolaborasi tim untuk membantu pencatatan finansial secara interaktif.</p>
+                    <span class="tag">Web App</span>
+                    <span class="tag">Kolaborasi</span>
+                    <br><a href="https://github.com/ImtiyazKhaldaAkifah/antiboncos" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
                 </div>
 
-                <div class="project-card" data-category="js">
-                    <h3>Weather App</h3>
-                    <p>Aplikasi cuaca real-time memanfaatkan REST API publik.</p>
-                    <span class="tag">JavaScript</span>
-                    <br><a href="#" class="project-link">Lihat Kode &rarr;</a>
+                <!-- CardioCare -->
+                <div class="project-card" data-category="mobile">
+                    <h3>CardioCare Mobile App</h3>
+                    <p>Aplikasi berbasis Android yang dirancang untuk mendukung pemantauan dan edukasi kesehatan jantung.</p>
+                    <span class="tag">Android App</span>
+                    <span class="tag">Mobile</span>
+                    <br><a href="https://github.com/alifahbasyrah/cardiocare_mobile_app" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
+                </div>
+
+                <!-- Gait Analysis Dashboard -->
+                <div class="project-card" data-category="ml">
+                    <h3>Gait Analysis Dashboard</h3>
+                    <p>Dashboard interaktif berbasis web yang terintegrasi dengan model Machine Learning untuk analisis pola berjalan.</p>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Web Dashboard</span>
+                    <br><a href="https://github.com/alifahbasyrah/gait-analysis-dashboard" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
+                </div>
+
+                <!-- CNN vs Transfer Learning -->
+                <div class="project-card" data-category="dl">
+                    <h3>CNN vs Transfer Learning</h3>
+                    <p>Eksperimen performa klasifikasi citra membandingkan arsitektur Custom CNN dengan metode Transfer Learning.</p>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Jupyter</span>
+                    <br><a href="https://github.com/alifahbasyrah/CNN-vs-Transfer-Learning-untuk-Klasifikasi-Citra" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
+                </div>
+
+                <!-- Autoencoder -->
+                <div class="project-card" data-category="dl">
+                    <h3>Autoencoder</h3>
+                    <p>Implementasi jaringan saraf Autoencoder dalam format Jupyter Notebook untuk rekonstruksi dan ekstraksi fitur citra.</p>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Jupyter</span>
+                    <br><a href="https://github.com/alifahbasyrah/AUTOENCODER" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
+                </div>
+
+                <!-- Manipulasi Citra -->
+                <div class="project-card" data-category="dl">
+                    <h3>Manipulasi Citra</h3>
+                    <p>Kumpulan algoritma pengolahan citra digital untuk transformasi, perbaikan kualitas, dan ekstraksi citra.</p>
+
+                    <span class="tag">Image Processing</span>
+                    <span class="tag">Jupyter</span>
+                    <br><a href="https://github.com/alifahbasyrah/MANIPULASI-CITRA" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
+                </div>
+
+                <!-- Eksperimen Sinyal & Citra -->
+                <div class="project-card" data-category="dl">
+                    <h3>Eksperimen Sinyal & Citra</h3>
+                    <p>Eksperimen pemrosesan sinyal dasar dan pengolahan citra menggunakan pustaka Python di Jupyter Notebook.</p>
+                    <span class="tag">Signal Processing</span>
+                    <span class="tag">Jupyter</span>
+                    <br><a href="https://github.com/alifahbasyrah/EKSPERIMEN-OPERASI-DASAR-PADA-SINYAL-DAN-CITRA" target="_blank" class="project-link">Lihat GitHub &rarr;</a>
                 </div>
             </div>
         </section>
