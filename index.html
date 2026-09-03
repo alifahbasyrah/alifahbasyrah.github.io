@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya - Web Developer</title>
+    <title>Alifah Basyrah Marsani - Portofolio</title>
     <style>
-        /* CSS Reset & Variable Design */
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
@@ -15,10 +14,19 @@
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        .light-theme {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --accent-color: #0284c7;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         body {
@@ -34,16 +42,50 @@
             margin: 0 auto;
         }
 
+        /* Navbar & Theme Toggle */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .theme-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--accent-color);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .theme-btn:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
         /* Hero / Header Section */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             border-bottom: 1px solid var(--card-bg);
         }
 
+        /* Foto Profil */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
         }
 
         header h1 span {
@@ -52,9 +94,9 @@
 
         header p {
             color: var(--text-secondary);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 20px auto;
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 10px auto 20px auto;
         }
 
         .social-links a {
@@ -62,13 +104,15 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s;
         }
 
         .social-links a:hover {
-            text-decoration: underline;
+            transform: translateY(-3px);
         }
 
-        /* Section Layout */
+        /* Sections */
         section {
             padding: 40px 0;
         }
@@ -81,7 +125,7 @@
             padding-left: 10px;
         }
 
-        /* Skills Section */
+        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -94,12 +138,38 @@
             border-radius: 8px;
             text-align: center;
             font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        /* Projects Section */
+        .skill-card:hover {
+            border: 1px solid var(--accent-color);
+        }
+
+        /* Filter Buttons */
+        .filter-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background: var(--accent-color);
+            color: #ffffff;
+        }
+
+        /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
 
@@ -107,11 +177,12 @@
             background-color: var(--card-bg);
             padding: 20px;
             border-radius: 10px;
-            transition: transform 0.2s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .project-card h3 {
@@ -124,12 +195,8 @@
             margin-bottom: 15px;
         }
 
-        .project-tags {
-            margin-bottom: 15px;
-        }
-
         .tag {
-            background-color: rgba(56, 189, 248, 0.1);
+            background-color: rgba(56, 189, 248, 0.15);
             color: var(--accent-color);
             padding: 4px 8px;
             border-radius: 4px;
@@ -138,18 +205,17 @@
         }
 
         .project-link {
+            display: inline-block;
+            margin-top: 10px;
             color: var(--accent-color);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 30px 0;
             color: var(--text-secondary);
-            font-size: 0.9rem;
             border-top: 1px solid var(--card-bg);
             margin-top: 40px;
         }
@@ -158,77 +224,96 @@
 <body>
 
     <div class="container">
-        <!-- Hero Section -->
+        <nav>
+            <strong style="color: var(--accent-color);">ABM.</strong>
+            <button class="theme-btn" id="themeToggle">☀️ Mode Terang</button>
+        </nav>
+
         <header>
-            <h1>Halo, Saya <span>Nama Kamu</span> 👋</h1>
-            <p>Web Developer yang berfokus pada pembangunan aplikasi web modern, responsif, dan mudah digunakan.</p>
+            <!-- Foto Profil (Ganti URL gambar di bawah dengan foto kamu) -->
+            <img src="https://via.placeholder.com/150" alt="Foto Profil Alifah" class="profile-img" id="profileImg">
+            
+            <h1>Alifah Basyrah Marsani</h1>
+            <p>Hi! I'm a Web Developer passionate about building modern, responsive, and user-friendly web applications. Skilled in HTML, CSS, JavaScript, and React. Always eager to learn new technologies!</p>
+            
             <div class="social-links">
-                <a href="https://github.com/username-kamu" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/username-kamu" target="_blank">LinkedIn</a>
-                <a href="mailto:emailkamu@example.com">Email</a>
+                <a href="https://github.com/alifahbasyrah" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="mailto:email@example.com">Email</a>
             </div>
         </header>
 
-        <!-- Keahlian (Skills) -->
         <section id="skills">
-            <h2>Keahlian Utama</h2>
+            <h2>Keahlian</h2>
             <div class="skills-grid">
                 <div class="skill-card">HTML & CSS</div>
                 <div class="skill-card">JavaScript</div>
                 <div class="skill-card">React.js</div>
-                <div class="skill-card">Node.js</div>
                 <div class="skill-card">Git & GitHub</div>
-                <div class="skill-card">Tailwind CSS</div>
             </div>
         </section>
 
-        <!-- Proyek (Projects) -->
         <section id="projects">
             <h2>Proyek Portofolio</h2>
+            
+            <!-- Interaktif: Filter Proyek -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterProjects('all')">Semua</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web App</button>
+                <button class="filter-btn" onclick="filterProjects('js')">JavaScript</button>
+            </div>
+
             <div class="projects-grid">
-                
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <h3>Aplikasi E-Commerce Sederhana</h3>
-                    <p>Web toko online responsif dengan fitur keranjang belanja dan antarmuka yang bersih.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <a href="https://github.com/username/project-1" target="_blank" class="project-link">Lihat Kode di GitHub &rarr;</a>
+                <div class="project-card" data-category="web">
+                    <h3>E-Commerce Web</h3>
+                    <p>Website toko online responsif menggunakan HTML dan CSS modern.</p>
+                    <span class="tag">HTML/CSS</span>
+                    <br><a href="#" class="project-link">Lihat Kode &rarr;</a>
                 </div>
 
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <h3>Dashboard Cuaca (Weather App)</h3>
-                    <p>Aplikasi pencarian prakiraan cuaca real-time menggunakan OpenWeatherMap API.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">REST API</span>
-                    </div>
-                    <a href="https://github.com/username/project-2" target="_blank" class="project-link">Lihat Kode di GitHub &rarr;</a>
+                <div class="project-card" data-category="js">
+                    <h3>Weather App</h3>
+                    <p>Aplikasi cuaca real-time memanfaatkan REST API publik.</p>
+                    <span class="tag">JavaScript</span>
+                    <br><a href="#" class="project-link">Lihat Kode &rarr;</a>
                 </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card">
-                    <h3>Sistem Manajemen Tugas (To-Do List)</h3>
-                    <p>Aplikasi pencatat tugas sehari-hari dengan fitur simpan data otomatis menggunakan LocalStorage.</p>
-                    <div class="project-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">LocalStorage</span>
-                    </div>
-                    <a href="https://github.com/username/project-3" target="_blank" class="project-link">Lihat Kode di GitHub &rarr;</a>
-                </div>
-
             </div>
         </section>
 
-        <!-- Footer -->
         <footer>
-            <p>&copy; 2026 Nama Kamu. Dibuat dengan GitHub Pages.</p>
+            <p>&copy; 2026 Alifah Basyrah Marsani. Dibuat dengan GitHub Pages.</p>
         </footer>
     </div>
 
+    <!-- JavaScript Interaktif -->
+    <script>
+        // Fitur Dark/Light Mode
+        const themeBtn = document.getElementById('themeToggle');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                themeBtn.textContent = '🌙 Mode Gelap';
+            } else {
+                themeBtn.textContent = '☀️ Mode Terang';
+            }
+        });
+
+        // Fitur Filter Proyek
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
